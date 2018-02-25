@@ -1,0 +1,3 @@
+body{
+    min-height: 100vh; /*to make footer stick to bottom via justify-content:spcae-between*/
+}

@@ -6,81 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.ico?v=1.1">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"
+          asp-fallback-href="css/bootstrap.min.css"
+          asp-fallback-test-class="offset-3"
+          asp-fallback-test-property="margin-left"
+          asp-fallback-test-value="25%"/>
     <link rel="stylesheet" type="text/css" href="css/additional.css"/>
-    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/highlight.css">
+    <link rel="stylesheet" href="css/main.css"/>
     <script src="js/highlight.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="monaco/min/vs/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"
+            asp-fallback-src="js/jquery-3.3.1.min.js"
+            asp-fallback-test="$.fn.jquery.indexOf('3.3.1') !== -1">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+            asp-fallback-src="js/bootstrap.min.js"
+            asp-fallback-test="$.fn.tooltip.Constructor.VERSION === '4.0.0'">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.8.2/min/vs/loader.js"></script>
     <title>F#: Русскоязычное сообщество</title>
 </head>
 <body>
-@RenderBody()
-<section class="darkest-background light">
-    <div class="container content-width footer">
-        <div class="row margin-top margin-bottom">
-            <address class="col-sm-2">
-                <p class="gray">Спросите нас</p>
-                <p><a target="_blank" href="https://t.me/fsharp_chat">Чат в Telegram</a> (<a target="_blank" href="http://telegrammy.net/group/Fsharp_chat">лог</a>)</p>
-                <p>
-                    <a target="_blank" href="https://gitter.im/fsharplang_ru/Lobby">Чат в Gitter</a>
-                </p>
-                <p>
-                    <a target="_blank" href="https://github.com/fsharplang-ru">Наш Github</a>
-                </p>
-            </address>
-            <div class="col-sm-2">
-                <p class="gray">FSharp.org</p>
-                <p>
-                    <a target="_blank" href="http://fsharp.org">Сайт проекта</a>
-                </p>
-                <p>
-                    <a target="_blank" href="http://fsharp.org/learn.html">Обучение F#</a>
-                </p>
-                <p>
-                    <a target="_blank" href="http://fsharp.org/about/index.html#documentation">Документация</a>
-                </p>
-                <p>
-                    <a target="_blank" href="http://fsharp.org/specs/language-spec/">Спецификации</a>
-                </p>
-                <p>
-                    <a target="_blank" href="http://fsharp.org/specs/component-design-guidelines/">Кодстайл</a>
-                </p>
-                <p>
-                    <a target="_blank" href="https://github.com/fsharp">Github</a>
-                </p>
-            </div>
-            <div class="col-sm-2">
-                <p class="gray">Литература</p>
+<div class="d-flex flex-column justify-content-between">
+    <main>
+        @RenderBody()
+    </main>
+    <section class="darkest-background light pt-2">
+        <div class="container content-width footer">
+            <div class="row margin-top margin-bottom">
+                <address class="col-sm-2">
+                    <p class="gray">Спросите нас</p>
+                    <p><a target="_blank" href="https://t.me/fsharp_chat">Чат в Telegram</a> (<a target="_blank" href="http://telegrammy.net/group/Fsharp_chat">лог</a>)</p>
+                    <p>
+                        <a target="_blank" href="https://gitter.im/fsharplang_ru/Lobby">Чат в Gitter</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/fsharplang-ru">Наш Github</a>
+                    </p>
+                </address>
+                <div class="col-sm-2">
+                    <p class="gray">FSharp.org</p>
+                    <p>
+                        <a target="_blank" href="http://fsharp.org">Сайт проекта</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="http://fsharp.org/learn.html">Обучение F#</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="http://fsharp.org/about/index.html#documentation">Документация</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="http://fsharp.org/specs/language-spec/">Спецификации</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="http://fsharp.org/specs/component-design-guidelines/">Кодстайл</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/fsharp">Github</a>
+                    </p>
+                </div>
+                <div class="col-sm-2">
+                    <p class="gray">Литература</p>
 
-            </div>
-            <div class="col-sm-2">
-                <p class="gray">Мероприятия</p>
+                </div>
+                <div class="col-sm-2">
+                    <p class="gray">Мероприятия</p>
 
-            </div>
-            <div class="col-sm-2">
-                <p class="gray">Ещё</p>
+                </div>
+                <div class="col-sm-2">
+                    <p class="gray">Ещё</p>
 
-            </div>
-            <div class="col-sm-2">
-                <a href="https://github.com/fsharplang-ru">
-                    <img class="logo-note" src="img/min_logo.png"/>
-                </a>
-            </div>
-        </div>
-        <div class="margin-top text-center">
-            <p class="rights">
-                Copyright © 2017 fsharplang.ru — Русскоязычное сообщество разработчиков F#
-                <br/>
-                <small>
-                    <a target="_blank" href="https://worldbeater.github.io">
-                        Designed by Worldbeater
+                </div>
+                <div class="col-sm-2">
+                    <a href="https://github.com/fsharplang-ru">
+                        <img class="logo-note" src="img/min_logo.png"/>
                     </a>
-                </small>
-            </p>
+                </div>
+            </div>
+            <div class="margin-top text-center">
+                <p class="rights">
+                    Copyright © 2017 fsharplang.ru — Русскоязычное сообщество разработчиков F#
+                    <br/>
+                    <small>
+                        <a target="_blank" href="https://worldbeater.github.io">
+                            Designed by Worldbeater
+                        </a>
+                    </small>
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 </body>
 </html>
